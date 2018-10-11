@@ -27,6 +27,6 @@ def _vox_completer(prefix, line, begidx, endidx, ctx):
     return set(all_commands)
 
 #add to list of completers
-__xonsh_completers__['vox'] = _vox_completer
+__xonsh__.completers['vox'] = _vox_completer
 #bump to top of list (otherwise bash completion interferes)
-__xonsh_completers__.move_to_end('vox', last=False)
+__xonsh__.completers.move_to_end('vox', last=False)
